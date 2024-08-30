@@ -5,7 +5,9 @@ import { Note } from '../interfaces/note.interface';
   providedIn: 'root',
 })
 export class LocalStorageService {
-  notes: Note[] = [new Note(1, 'Ass', 'ASSHOLE', new Date(2024 - 1 - 1))];
+  note1 = new Note(1, 'Ass', 'ASSHOLE', new Date(2024 - 1 - 1));
+  note2 = new Note(2, 'Ass', 'ASSHOLE', new Date(2024 - 1 - 1));
+  notes: Note[] = [this.note1, this.note2];
 
   setNoteToArray(value: Note) {
     this.notes.push(value);

@@ -1,0 +1,21 @@
+<form class="login-form" [formGroup]="noteForm" (ngSubmit)="onSubmit($event)">
+  <h1>Neue Notiz</h1>
+
+  <label for="">
+    <input formControlName="noteTitle" type="text" placeholder="Title" />
+  </label>
+  <label for="">
+    <input
+      formControlName="noteDescription"
+      type="text"
+      placeholder="Description"
+    />
+  </label>
+
+  <!-- Date Picker
+  <label for="">
+    <input formControlName = 'noteTitle' type="text" />
+  </label> -->
+
+  <button class="btn">Add note</button>
+</form>

@@ -12,15 +12,9 @@ import { NoteCardComponent } from '../note-card/note-card.component';
 })
 export class NoteListComponent {
   localStorageService = inject(LocalStorageService);
-  notes: any = [];
+  notes: Note[];
 
   constructor() {
-    var notesFromStorage = this.localStorageService.getNotesFromArray;
-    this.notes = notesFromStorage;
+    this.notes = this.localStorageService.getNotesFromArray();
   }
-
-  // retrieveFromLocalStorage() {
-  //   const value = this.localStorageService.getItem('note');
-  //   console.log(value);
-  // }
 }
